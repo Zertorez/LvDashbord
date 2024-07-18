@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <button id="login-button" class="login-button">Вход</button>
+        <div id="profile-container" style="display: none;">
+            <img id="profile-photo" class="profile-photo" src="" alt="Profile Photo">
+            <span id="profile-name"></span>
+        </div>
+    </div>
+    
+    <div id="logo">
+        <img src="./photo/logo.png" alt="Logo" style="display: block; margin: 0 auto; max-width: 100%; height: auto; width: 300px;">
+    </div>
+
+    <h1>Топ Агентов LasVegas</h1>
+    
+    <div id="controls">
+        <label for="city-selector">Выберите город:</label>
+        <select id="city-selector">
+            <!-- Города будут динамически добавлены здесь -->
+        </select>
+        <input type="date" id="start-date">
+        <input type="date" id="end-date">
+        <button id="search-button">Поиск</button>
+    </div>
+    
+    <div id="employee-dashboard"></div>
+    <div id="deals-info"></div>
+    <div class="loader" id="loader"></div>
+    
+    <!-- Подключаем отдельный файл для попапа -->
+    <div id="popup-container"></div>
+    
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

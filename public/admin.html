@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h1>Страница администратора</h1>
+
+    <div id="login-section">
+        <h2>Вход для администратора</h2>
+        <form id="login-form">
+            <label for="admin-login">Логин:</label>
+            <input type="text" id="admin-login" required>
+            <label for="admin-password">Пароль:</label>
+            <input type="password" id="admin-password" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+
+    <div id="admin-section" style="display:none;">
+        <section id="departments">
+            <h2>Управление идентификаторами отделов по городам</h2>
+            <label for="city-selector">Выберите Город:</label>
+            <select id="city-selector">
+                <!-- Города будут динамически добавлены здесь -->
+            </select>
+            <div id="department-ids">
+                <label for="department-ids-input">Идентификаторы отделов (через запятую):</label>
+                <input type="text" id="department-ids-input">
+            </div>
+            <button id="save-departments-button">Сохранить</button>
+        </section>
+
+        <section id="exceptions">
+            <h2>Управление идентификаторами исключенных пользователей</h2>
+            <label for="exception-ids-input">Идентификаторы исключений для пользователей (через запятую):</label>
+            <input type="text" id="exception-ids-input">
+            <button id="save-exceptions-button">Сохранить</button>
+        </section>
+
+        <section id="add-city">
+            <h2>Добавить Новый город</h2>
+            <label for="new-city-input">Название города:</label>
+            <input type="text" id="new-city-input" placeholder="Введите название города">
+            <label for="new-department-ids-input">Идентификаторы отделов (через запятую):</label>
+            <input type="text" id="new-department-ids-input" placeholder="Введите идентификаторы отделов">
+            <button id="add-city-button">Добавить город</button>
+        </section>
+
+        <section id="delete-city">
+            <h2>Удалить Город</h2>
+            <label for="delete-city-selector">Выберите Город:</label>
+            <select id="delete-city-selector">
+                <!-- Города будут динамически добавлены здесь -->
+            </select>
+            <button id="delete-city-button">Удалить город</button>
+        </section>
+
+        <section id="admin-management">
+            <h2>Управление администраторами</h2>
+            <label for="new-admin-login">Логин нового администратора:</label>
+            <input type="text" id="new-admin-login" placeholder="Введите логин нового администратора">
+            <label for="new-admin-password">Пароль нового администратора:</label>
+            <input type="password" id="new-admin-password" placeholder="Введите пароль нового администратора">
+            <button id="add-admin-button">Добавить администратора</button>
+
+            <label for="delete-admin-login">Логин администратора для удаления:</label>
+            <input type="text" id="delete-admin-login" placeholder="Введите логин администратора для удаления">
+            <button id="delete-admin-button">Удалить администратора</button>
+        </section>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
